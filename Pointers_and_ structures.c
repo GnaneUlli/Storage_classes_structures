@@ -43,6 +43,7 @@ void calculateAverage(struct Student *student) {
 }
 
 int main() {
+    
     struct Student student;
 
     read(&student);
