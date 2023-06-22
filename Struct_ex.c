@@ -1,6 +1,7 @@
 #include <stdio.h>
 
 // Define a structure to represent a point in 2D space
+
 struct Point {
     int x;
     int y;
