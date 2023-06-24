@@ -15,6 +15,7 @@ address, ‘*’ is dereferencing operator to memory addresses only. Hence,
 the compiler throws an error.*/
 
 2.register int i=10;
+
 Is it mandatory that variable ‘i’ gets stored in the register only?
 
 Ans : False
