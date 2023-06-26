@@ -52,6 +52,64 @@ Ans: Error run time
 /*The void pointer cannot be accepted without typecasting.
 The correct statement is printf("%d", *(int *)p);*/
 
+6.
 
+#include<stdio.h>
+int main()
+{
+int x, a=5, b=10; //line 1
+x=a+b;
+static int y = x; //line 3
+if(y==x)
+printf("Hello");
+else
+if(y>x)
+printf("Hi");
+else
+printf("Bye");
+return 0;
+}
+Ans: compile time error
 
+/*The initialization of static variable with some other variable
+cannot be done, the reason is that all static variables must be initialized
+before the execution of main(). The expression at line 1 int x = 10; will
+get executed only after the execution of main(). The expression at line 3,
+static int y = x; the value x is not known, so it throws an error. The
+expression static int y = 10; is allowed, because the value 10 is constant
+that is known before execution of main().*/
+
+7.
+#include <stdio.h>
+int main()
+{
+int x = 3;
+int y;
+y = sizeof(++x);
+printf("%d %d\n", x, y);
+return 0;
+}
+
+Ans : 3,4
+/*sizeof() operator does not evaluate any other expressions*/
+
+8.
+
+#include<stdio.h>
+int main()
+{
+int a = 3,4; //line 1;
+int b = (3,4);
+if(a == b)
+printf("Equal");
+else
+printf("Not Equal");
+return 0;
+}
+
+Ans : run time error
+/*At line 1, there is no such syntax, the compiler throws an
+error. It is similar to int a=3, 4;*/
+
+9.
 
