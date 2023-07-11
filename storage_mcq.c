@@ -112,4 +112,67 @@ Ans : run time error
 error. It is similar to int a=3, 4;*/
 
 9.
+#include<stdio.h>
+extern int j = 20;
+int main()
+{
+extern int i; //line 1
+i = 10; //line 2
+printf("%d ",i);
+printf("%d",j);
+return 0;
+}
+
+Ans : link Time error
+/*In line 2, we are trying to store value 10
+in variable ‘i’ and variable ‘i’ that are not bound to memory yet. Hence
+compiler throws a link-time error.*/
+
+10.
+one.c
+-----
+#include<stdio.h>
+extern int i;
+int i = 10;
+extern int p;
+int main()
+{
+extern int i;
+printf("%d %d",i,p);
+return 0;
+}
+two.c
+-----
+int p = 20;
+
+Ans : 10,20
+/*The given program will not report any error. In one.c file the
+variable ‘p’ is an extern variable that can refer to variables of other files
+also and in two.c we are having the definition of ‘p'.*/
+
+11.
+-----
+#include<stdio.h>
+extern int i;
+int i = 10;
+extern int p;
+int main()
+{
+extern int i;
+printf("%d %d",i,p);
+return 0;
+}
+two.c
+-----
+#include<stdio.h>
+int p = 20;
+int main()
+{
+printf("%d",p);
+return 0;
+}
+
+Ans : Two functions with same name thows an error.
+
+
 
