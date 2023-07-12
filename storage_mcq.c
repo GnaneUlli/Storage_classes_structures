@@ -196,6 +196,7 @@ return (fun(n-1) + fun(n-2));
 }
 
 Ans : Error Compile time 
+
 //Two different storage classes canot be declared in same variable.
 
 
