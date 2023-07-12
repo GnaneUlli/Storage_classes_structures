@@ -174,5 +174,28 @@ return 0;
 
 Ans : Two functions with same name thows an error.
 
+12.
+#include<stdio.h>
+int fun(int);
+int main()
+{
+static auto int n;
+printf("%d",res);
+scanf("%d",&n);
+int res = fun(n);
+return 0;
+}
+int fun(int n)
+{
+if(n == 0)
+return 0;
+else if(n == 1)
+return 1;
+else
+return (fun(n-1) + fun(n-2));
+}
+
+Ans : Error Compile time 
+//Two different storage classes canot be declared in same variable.
 
 
