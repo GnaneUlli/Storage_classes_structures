@@ -199,4 +199,16 @@ Ans : Error Compile time
 
 //Two different storage classes canot be declared in same variable.
 
+13.
+#include<stdio.h>
+int main()
+{
+register int i = 10;
+int *p = &i;
+printf("%d",*p);
+return 0;
+}
 
+Ans : Error compile time
+
+//Adress of register is not found
