@@ -1,5 +1,6 @@
 A storage class defines the scope (visibility) and life-time of variables and functions within a C Program. 
 They precede the type that they modify.
+
 We have four different storage classes in a C program −
 1.auto
 2.register
