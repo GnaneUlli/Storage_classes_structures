@@ -38,3 +38,25 @@ return 0;
 }
 Compare the output of prog 1 and prog 2.
 Ans :  both are the same
+
+2.
+#include<stdio.h>
+struct std
+{
+int a;
+union unit
+{
+int a, b;
+} u;
+};
+int main()
+{
+struct std s = {1, 2, 3};
+printf("%d %d %d ", s.a, s.u.a, s.u.b);
+return 0;
+}
+(a) 1 2 3
+(b) 1 3 3
+(c) 3 2 2
+(d) 1 2 2
+Ans : d
